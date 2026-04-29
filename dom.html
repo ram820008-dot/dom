@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Tree and Methods</title>
+</head>
+<body>
+
+<h2 id="heading">DOM Methods Example</h2>
+<p class="demo">First Paragraph</p>
+<p class="demo">Second Paragraph</p>
+
+<button onclick="showData()">Show Output</button>
+
+<script>
+function showData() {
+    let a = document.getElementById("heading").innerHTML;
+    let b = document.getElementsByClassName("demo")[0].innerHTML;
+    let c = document.getElementsByTagName("p")[1].innerHTML;
+    let d = document.querySelector(".demo").innerHTML;
+    let e = document.querySelectorAll(".demo")[1].innerHTML;
+
+    document.getElementById("heading").innerHTML =
+        a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e;
+}
+</script>
+
+</body>
+</html>
